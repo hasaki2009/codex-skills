@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $repoRoot = (Resolve-Path "$PSScriptRoot\..").Path
 $listFile = Join-Path $repoRoot 'config\superpowers.list'
-$srcRoot = Join-Path $repoRoot 'skills'
+$srcRoot = Join-Path $repoRoot 'skills\superpowers'
 $dstRoot = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME 'skills' } else { Join-Path $env:USERPROFILE '.codex\skills' }
 
 if (!(Test-Path $listFile)) { throw "missing list: $listFile" }

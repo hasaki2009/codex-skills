@@ -10,6 +10,7 @@ New-Item -ItemType Directory -Force -Path $targetDir | Out-Null
 Get-ChildItem -Path $srcDir -Directory | ForEach-Object {
   $name = $_.Name
   if ($name.StartsWith('.')) { return }
+  if ($name -eq 'superpowers') { return }
   $dest = Join-Path $targetDir $name
   if (Test-Path $dest) {
     Remove-Item -Recurse -Force $dest

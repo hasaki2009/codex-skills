@@ -11,6 +11,7 @@ for src in "$SRC_DIR"/*; do
   [ -d "$src" ] || continue
   name="$(basename "$src")"
   [[ "$name" == .* ]] && continue
+  [[ "$name" == "superpowers" ]] && continue
   ln -sfn "$src" "$TARGET_DIR/$name"
   echo "linked: $name"
 done
