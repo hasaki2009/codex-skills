@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plain Language Explainer"
+  short_description: "Explain technical concepts in beginner-friendly Chinese"
+  default_prompt: "Explain this in plain Chinese for non-technical users with examples and next actions."
